@@ -1,0 +1,35 @@
+{
+  "name": "nix-enterprise/laravel-grafana-datasource",
+  "description": "Grafana datasource",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Evgeniy Gorichenko",
+      "email": "evgeniy.gorichenko@nixsolutions.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "ext-json": "*",
+    "laravel/framework": ">=5.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "NixEnterprise\\GrafanaDatasource\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "NixEnterprise\\GrafanaDatasource\\GrafanaServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable" : true
+}
