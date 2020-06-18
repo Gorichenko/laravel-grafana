@@ -1,5 +1,6 @@
 {
     "name": "nix-enterprise/laravel-grafana-datasource",
+    "version": "0.0.1",
     "description": "Grafana datasource",
     "type": "library",
     "authors": [

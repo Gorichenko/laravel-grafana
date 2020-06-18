@@ -17,8 +17,8 @@ class AuthMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->getUser() != Config::get('grafana.grafana_user') ||
-            $request->getPassword() != Config::get('grafana.grafana_pass')) {
+        if ($request->getUser() != Config::get('datasource.grafana.grafana_user') ||
+            $request->getPassword() != Config::get('datasource.grafana.grafana_pass')) {
 
             $headers = ['WWW-Authenticate' => 'Basic'];
 

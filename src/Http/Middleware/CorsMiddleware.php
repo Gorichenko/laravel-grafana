@@ -15,11 +15,11 @@ class CorsMiddleware
     public function handle($request, Closure $next)
     {
         $headers = [
-            'Access-Control-Allow-Origin'      => Config::get('grafana.access_control_allow_origin'),
-            'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
+            'Access-Control-Allow-Origin' => Config::get('datasource.grafana.access_control_allow_origin'),
+            'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
             'Access-Control-Allow-Credentials' => 'true',
-            'Access-Control-Max-Age'           => '86400',
-            'Access-Control-Allow-Headers'     => 'accept, content-type, Content-Type, Authorization, X-Requested-With',
+            'Access-Control-Max-Age' => '86400',
+            'Access-Control-Allow-Headers' => 'accept, content-type, Content-Type, Authorization, X-Requested-With',
         ];
 
         if ($request->isMethod('OPTIONS')) {
